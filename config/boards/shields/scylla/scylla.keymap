@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define SYM 1
-#define NAV 2
 
 / {
 	keymap {
@@ -12,34 +10,13 @@
 
 		DEF {
 			bindings = <
-&bt BT_CLR  &kp N1 &kp N2 &kp N3  &kp N4   &kp N5         &kp N6    &kp N7         &kp N8          &kp N9   &kp N0    &kp DEL
-&kp TAB     &kp Q  &kp W  &kp F   &kp P    &kp B          &kp J     &kp L          &kp U           &kp Y    &kp SEMI  &kp MINUS
-&kp LCTRL   &kp A  &kp R  &kp S   &kp T    &kp G          &kp M     &kp N          &kp E           &kp I    &kp O		 &kp SQT
-&kp LSHIFT  &kp Z  &kp X  &kp C   &kp D    &kp V          &kp K     &kp H          &kp COMMA       &kp DOT  &kp SLASH &kp END
-								  &mo SYM  &kp SPACE      &kp LALT  &lt NAV ENTER  &mt LSHFT BSPC  &mo SYM
-                                  &kp LGUI &lt NAV ENTER  &kp RALT  &kp PSCRN
+			&bt BT_CLR  &kp N1  &kp N2  &kp N3    &kp N4         &kp N5      &bt BT_CLR     &kp N7          &kp N8     &kp N9   &kp N0     &kp DEL
+			&kp TAB     &kp Q   &kp W   &kp F     &kp P          &kp B       &kp J          &kp L           &kp U      &kp Y    &kp SEMI   &kp MINUS
+			&kp LCTRL   &kp A   &kp R   &kp S     &kp T          &kp G       &kp M          &kp N           &kp E      &kp I    &kp O	  &kp SQT
+			&kp LSHIFT  &kp Z   &kp X   &kp C     &kp D          &kp V       &kp K          &kp H           &kp COMMA  &kp DOT  &kp SLASH  &kp END
+										&mo SYM   &kp SPACE      &kp LALT    &lt NAV ENTER  &mt LSHFT BSPC  &mo SYM
+                                        &kp LGUI  &lt NAV ENTER  &kp RALT    &kp PSCRN
 			>;
 		};
-    SYM {
-			bindings = <
-&kp GRAVE &kp EXCL  &kp F2    &kp F3   &kp F4   &kp F5       &kp F6   &kp F7    &kp F8    &kp F9 &kp F11   &kp F12 
-&trans    &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp CARET    &none    &kp N7    &kp N8    &kp N9 &kp COLON &trans
-&trans    &kp EQUAL &kp DLLR  &kp LPAR &kp RPAR &kp TILDE    &kp N0   &kp N4    &kp N5    &kp N6 &kp PLUS  &kp STAR
-&trans    &trans    &kp PRCNT &kp LBKT &kp RBKT &kp PIPE     &kp N0   &kp N1    &kp N2    &kp N3 &kp BSLH  &kp HOME
-                              &trans   &trans   &trans       &kp LEFT &kp UP    &kp RIGHT
-																			 &trans   &kp ESC			 &kp ESC  &kp DOWN
-			>;
-    };
-
-    NAV {
-			bindings = <
-&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp F3   &kp F4   &bt BT_CLR       &kp F6      &kp F7  &kp F8  &kp F9 &kp F10   &kp F12 
-&trans       &kp AT       &kp AMPS     &kp LBRC &kp RBRC &bootloader      &bootloader &kp N7  &kp N8    &kp N9 &kp COLON &trans
-&trans       &kp EQUAL    &kp DLLR     &kp LPAR &kp RPAR &kp TILDE        &kp N0      &kp N4  &kp N5    &kp N6 &kp PLUS  &kp STAR
-&trans       &trans       &kp PRCNT    &kp LBKT &kp RBKT &kp PIPE         &kp N0      &kp N1  &kp N2    &kp N3 &kp BSLH  &trans
-                                       &trans   &trans   &trans           &kp LEFT    &kp UP  &kp RIGHT
-																							  &trans   &kp ESC					&kp ESC     &kp DOWN
-			>;
-    };
 	};
 };
